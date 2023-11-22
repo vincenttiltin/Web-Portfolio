@@ -1,5 +1,5 @@
 body {
-    background-color: lightgray; /* Use a lighter shade of grey */
+    background-color: lightgray;
     font-family: Georgia, 'Times New Roman', Times, serif, cursive;
     margin: 0;
     padding: 0;
@@ -15,102 +15,92 @@ body.fade-in {
     opacity: 1;
 }
 
-
 h2 {
     font-family: 'Alex Brush', cursive;
     font-size: 48px;
 }
-/* Update this in your style.css file */
 
 h3 {
-    font-size: 32px; /* Adjust the font size for h3 headings */
+    font-size: 32px;
 }
 
 p {
     font-size: 20px;
-    font-family:Georgia, 'Times New Roman', Times, serif/* Adjust the font size for paragraphs */
 }
 
-/* If you want to adjust the font size for italic text */
 i {
-    font-size: 20px; /* Adjust the font size for italic text */
+    font-size: 20px;
 }
 
-/* If you want to adjust the font size for bold text */
 b {
-    font-size: 20px; /* Adjust the font size for bold text */
+    font-size: 20px;
 }
-
-
 
 .column-left {
-    flex: 1.5; /* Increase the flex value to make the left column wider */
-    max-width: 600px; /* Adjust the max-width to control the maximum width of the left column */
+    flex: 1.5;
+    max-width: 600px;
 }
 
 .column-right {
-    flex: 1; /* Adjust the flex value for the right column accordingly */
-    max-width: 400px; /* Adjust the max-width for the right column accordingly */
+    flex: 1;
+    max-width: 400px;
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 
 header {
-    background-color:  lightgray;
+    background-color: lightgray;
     color: black;
     padding: 20px 0;
     display: flex;
-    align-items: center; /* Center items vertically */
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 #title {
-    margin: 0; /* Remove default margin for h1 */
-    margin-right: 910px;
+    margin: 0;
+    flex-grow: 1;
     font-size: 30px;
-    
 }
 
 #logo {
-    width: 70px; /* Set the width of your logo */
-}
-
-#about {
-    padding: 50px 0;
+    width: 70px;
 }
 
 .portrait {
-    width: 105%; /* Make the portrait image fill its container */
-    border-radius: 30% 35% ; /* Set the border-radius for a perfect circle */
-    opacity: 0; /* Set initial opacity to 0 */
-    animation: fade-in 1s forwards; /* Apply the fade-in animation */
-    margin-top: 60px; /* Center the image vertically */
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fade-in 1s forwards;
+    margin-top: 60px;
 }
 
 .portrait-container {
     position: relative;
-    overflow: hidden; /* Hide overflowing content to create a mask */
-    
+    overflow: hidden;
 }
-
-/* Add this to your style.css file */
 
 #contact {
-    background-image: url('imgs/background-6556414.jpg'); /* Adjust the path to your image */
-    background-size: cover; /* Ensure the image covers the entire container */
-    background-position: center; /* Center the image */
-    color: black; /* Set text color to white or a color that contrasts well with the image */
-    padding: 100px 0; /* Increase the padding to make the section taller */
-    height: 500px; /* Adjust the height to make the section taller */
+    background-image: url('imgs/background-6556414.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black;
     display: flex;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    text-align: center;
 }
+
+
 
 
 ul {
@@ -121,14 +111,30 @@ ul {
 ul.social-icons {
     list-style: none;
     padding: 0;
-    opacity: 0; /* Set initial opacity to 0 for the fade-in effect */
-    animation: fade-in 1s ease-in-out forwards; /* Add the fade-in animation */
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
 }
 
+@media only screen and (max-width: 768px) {
+    .column-left,
+    .column-right {
+        flex: 1;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #title {
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+/* Add this to your style.css file */
 @keyframes fade-in {
     from {
         opacity: 0;
-        transform: translateX(-20px); /* Optional: Start the icons slightly off-screen to the left */
+        transform: translateX(-20px);
     }
     to {
         opacity: 1;
@@ -140,15 +146,13 @@ li {
     margin-bottom: 15px;
     display: flex;
     align-items: center;
-    font-size: 20px; /* Set the font size for the text */
+    font-size: 20px;
 }
 
-/* Style the icons */
 li i {
-    margin-right: 10px; /* Adjust the spacing between the icon and text */
-    font-size: 30px; /* Set the font size for the icons */
+    margin-right: 10px;
+    font-size: 30px;
 }
-
 
 .contact-info,
 .cv-download {
@@ -156,13 +160,11 @@ li i {
     max-width: 400px;
 }
 
-
-/* Style the download button */
 .download-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #fff; /* Set the background color */
-    color: #333; /* Set the text color */
+    background-color: #fff;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
@@ -170,7 +172,7 @@ li i {
 }
 
 .download-button:hover {
-    background-color: #eee; /* Set the background color on hover */
+    background-color: #eee;
 }
 
 nav ul {
@@ -182,11 +184,11 @@ nav ul {
 
 header nav ul li {
     display: inline-block;
-    margin-right: 20px; /* Increase the margin between menu items */
+    margin-right: 20px;
 }
 
 header nav ul li:last-child {
-    margin-right: 0; /* Remove margin for the last menu item */
+    margin-right: 0;
 }
 
 nav li {
@@ -201,13 +203,53 @@ nav a {
 }
 
 nav a:hover {
-    color:whitesmoke;
+    color: whitesmoke;
 }
 
 nav a.active {
-    color:whitesmoke; /* Set the text color for the active link */
+    color: whitesmoke;
 }
 
+/* --------------------------------- */
+/* Projects Page */
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.project-box {
+    position: relative;
+    width: 70%;
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    border: 5px solid #ccc; 
+}
+
+
+.repo-button {
+    position: absolute;
+    bottom: 15px; 
+    right: 15px; 
+    background-color: purple;
+    color: white;
+    padding: 12px 20px; 
+    border: none;
+    border-radius: 8px; 
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px; 
+    font-family: 'Quicksand', sans-serif;  
+}
+
+.repo-button i {
+    margin-right: 8px; 
+}
 
 
 

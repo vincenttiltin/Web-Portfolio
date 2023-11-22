@@ -5,15 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // fade transition on portrait
 document.addEventListener("DOMContentLoaded", function() {
-    // Wait for the DOM to be fully loaded
-
-    // Get the portrait element
+    
     var portrait = document.querySelector('.portrait');
-
-    // Set a timeout to add the 'fade-in' class after a short delay
     setTimeout(function() {
-        portrait.style.opacity = 1; // Set opacity to 1 after the delay
-    }, 500); // Adjust the delay as needed
+        portrait.style.opacity = 1; 
+    }, 500); 
 });
 
 
@@ -25,10 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var navLinks = document.querySelectorAll('.nav-link');
 
-    // Iterate through each link and check if its href matches the current page URL
     navLinks.forEach(function (link) {
         if (link.href === currentUrl) {
-            // Add a class to highlight the current link
             link.classList.add('active');
         }
     });
