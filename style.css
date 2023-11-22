@@ -1,0 +1,215 @@
+body {
+    background-color: lightgray; /* Use a lighter shade of grey */
+    font-family: Georgia, 'Times New Roman', Times, serif, cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+
+h2 {
+    font-family: 'Alex Brush', cursive;
+    font-size: 48px;
+}
+/* Update this in your style.css file */
+
+h3 {
+    font-size: 32px; /* Adjust the font size for h3 headings */
+}
+
+p {
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif/* Adjust the font size for paragraphs */
+}
+
+/* If you want to adjust the font size for italic text */
+i {
+    font-size: 20px; /* Adjust the font size for italic text */
+}
+
+/* If you want to adjust the font size for bold text */
+b {
+    font-size: 20px; /* Adjust the font size for bold text */
+}
+
+
+
+.column-left {
+    flex: 1.5; /* Increase the flex value to make the left column wider */
+    max-width: 600px; /* Adjust the max-width to control the maximum width of the left column */
+}
+
+.column-right {
+    flex: 1; /* Adjust the flex value for the right column accordingly */
+    max-width: 400px; /* Adjust the max-width for the right column accordingly */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header {
+    background-color:  lightgray;
+    color: black;
+    padding: 20px 0;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+#title {
+    margin: 0; /* Remove default margin for h1 */
+    margin-right: 910px;
+    font-size: 30px;
+    
+}
+
+#logo {
+    width: 70px; /* Set the width of your logo */
+}
+
+#about {
+    padding: 50px 0;
+}
+
+.portrait {
+    width: 105%; /* Make the portrait image fill its container */
+    border-radius: 30% 35% ; /* Set the border-radius for a perfect circle */
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fade-in 1s forwards; /* Apply the fade-in animation */
+    margin-top: 60px; /* Center the image vertically */
+}
+
+.portrait-container {
+    position: relative;
+    overflow: hidden; /* Hide overflowing content to create a mask */
+    
+}
+
+/* Add this to your style.css file */
+
+#contact {
+    background-image: url('imgs/background-6556414.jpg'); /* Adjust the path to your image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+    color: black; /* Set text color to white or a color that contrasts well with the image */
+    padding: 100px 0; /* Increase the padding to make the section taller */
+    height: 500px; /* Adjust the height to make the section taller */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul.social-icons {
+    list-style: none;
+    padding: 0;
+    opacity: 0; /* Set initial opacity to 0 for the fade-in effect */
+    animation: fade-in 1s ease-in-out forwards; /* Add the fade-in animation */
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-20px); /* Optional: Start the icons slightly off-screen to the left */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 20px; /* Set the font size for the text */
+}
+
+/* Style the icons */
+li i {
+    margin-right: 10px; /* Adjust the spacing between the icon and text */
+    font-size: 30px; /* Set the font size for the icons */
+}
+
+
+.contact-info,
+.cv-download {
+    text-align: center;
+    max-width: 400px;
+}
+
+
+/* Style the download button */
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff; /* Set the background color */
+    color: #333; /* Set the text color */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.download-button:hover {
+    background-color: #eee; /* Set the background color on hover */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px; /* Increase the margin between menu items */
+}
+
+header nav ul li:last-child {
+    margin-right: 0; /* Remove margin for the last menu item */
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color:whitesmoke;
+}
+
+nav a.active {
+    color:whitesmoke; /* Set the text color for the active link */
+}
+
+
+
+
+
+
