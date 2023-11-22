@@ -228,6 +228,7 @@ nav a.active {
     border-radius: 15px;
     margin: 10px;
     border: 5px solid #ccc; 
+    padding-left: 15px
 }
 
 
@@ -250,6 +251,26 @@ nav a.active {
 .repo-button i {
     margin-right: 8px; 
 }
+
+.technologies {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Add margin for separation from the paragraph */
+}
+
+.technology-logo {
+    
+    display: flex;
+    align-items: center;
+}
+
+.technology-logo img {
+    width: 50px; /* Adjust the width of the logos */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Add margin between logo and text */
+}
+
+
 
 
 
